@@ -11,7 +11,77 @@ html {
 	font-size: 8px;
 }
 body {
-  font-family: "Noto Sans Math", sans-serif;
-  font-weight: 400;
-  font-style: normal;
+	font-family: 'Noto Sans Math', sans-serif;
+	font-weight: 400;
+	font-style: normal;
+}
+
+/* main background: #AEAEB2
+
+calculator background: #FFFFFF
+
+formal button foreground: #F3F3F7
+formal button background: #F3F3F7
+
+colorful button foreground: #F8F9FB
+colorful button background: #017AFF
+
+normal text: #2B2B2B
+offset text: fall opacity 30% */
+
+.body-parent {
+	background-color: #aeaeb2;
+	height: 100vh;
+	width: 100vw;
+	display: grid;
+	justify-content: center;
+	align-content: center;
+}
+
+.calc-parent {
+	background-color: #ffffff;
+	height: 65vh;
+	width: 45vw;
+	border-radius: 1em;
+	overflow: hidden;
+
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+	grid-template-rows: repeat(5, 1fr);
+	gap: 0.5em;
+}
+
+.calc-child1 {
+	grid-column: span 5 / span 5;
+	background-color: lightpink;
+}
+
+.calc-child2 {
+	grid-column: span 3 / span 3;
+	grid-row: span 4 / span 4;
+	grid-row-start: 2;
+	background-color: lightseagreen;
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+	grid-template-rows: repeat(5, 1fr);
+	gap: 0.5em;
+}
+
+.calc-child2-sub1 {
+	grid-column: span 5 / span 5;
+	background-color: lightcoral;
+}
+.calc-child2-sub2 {
+	grid-column: span 5 / span 5;
+	grid-row: span 4 / span 4;
+	grid-row-start: 2;
+	background-color: lightgoldenrodyellow;
+}
+
+.calc-child3 {
+	grid-column: span 2 / span 2;
+	grid-row: span 4 / span 4;
+	grid-column-start: 4;
+	grid-row-start: 2;
+	background-color: lightsalmon;
 }
