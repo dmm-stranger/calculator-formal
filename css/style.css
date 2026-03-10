@@ -8,7 +8,7 @@
 
 html {
 	box-sizing: border-box;
-	font-size: 8px;
+	font-size: 16px;
 }
 body {
 	font-family: 'Noto Sans Math', sans-serif;
@@ -44,6 +44,9 @@ offset text: fall opacity 30% */
 	width: 45vw;
 	border-radius: 1em;
 	overflow: hidden;
+	-moz-box-shadow: 20px 20px 51px 0px #727272;
+	-webkit-box-shadow: 20px 20px 51px 0px #727272;
+	box-shadow: 20px 20px 51px 0px #727272;
 
 	display: grid;
 	grid-template-columns: repeat(5, 1fr);
@@ -54,13 +57,21 @@ offset text: fall opacity 30% */
 .calc-child1 {
 	grid-column: span 5 / span 5;
 	background-color: lightpink;
+	letter-spacing: 0.5rem;
+	font-size: 2rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-weight: bolder;
+	font-style: italic;
+	text-transform: uppercase;
 }
 
 .calc-child2 {
 	grid-column: span 3 / span 3;
 	grid-row: span 4 / span 4;
 	grid-row-start: 2;
-	background-color: lightseagreen;
+	/* background-color: lightseagreen; */
 	display: grid;
 	grid-template-columns: repeat(5, 1fr);
 	grid-template-rows: repeat(5, 1fr);
@@ -76,6 +87,31 @@ offset text: fall opacity 30% */
 	grid-row: span 4 / span 4;
 	grid-row-start: 2;
 	background-color: lightgoldenrodyellow;
+	padding: 0.5rem 1.2rem;
+
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+	grid-template-rows: repeat(4, 1fr);
+	justify-content: center;
+	gap: 0.5rem;
+}
+
+.calc-btn {
+	text-align: center;
+	background-color: tomato;
+
+	width: 3.3rem;
+	height: 3.3rem;
+	border-radius: 100%;
+}
+
+.many {
+	height: 7.2rem;
+	border-top-left-radius: 1.5rem;
+	border-top-right-radius: 1.5rem;
+	border-bottom-left-radius: 1.5rem;
+	border-bottom-right-radius: 1.5rem;
+	grid-row: span 2 / span 2;
 }
 
 .calc-child3 {
