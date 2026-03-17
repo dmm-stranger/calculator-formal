@@ -19,7 +19,7 @@ clearButton.addEventListener('click', () => {
 
 equalButton.addEventListener('click', () => {
 	try {
-		currentInput = Number(currentInput);
+		currentInput = eval(currentInput);
 		console.log(currentInput);
 		// display.value = currentInput;
 	} catch (error) {
