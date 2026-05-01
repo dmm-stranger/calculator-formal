@@ -1,29 +1,26 @@
-const display = document.getElementById('display');
-const buttons = document.querySelectorAll('.calc-btn');
-const clearButton = document.getElementById('clear');
-const equalButton = document.getElementById('equals');
+// catch display:
+const display = document.getElementById('display'); // #dis
 
-let currentInput = '';
+// catch all type buttons:
+const buttons = document.querySelectorAll('.calc-btn'); // #btn
+const btnBackslash = document.getElementById('backslash'); // #btn
 
-buttons.forEach((button) => {
-	button.addEventListener('click', () => {
-		currentInput += button.textContent;
-		display.value = currentInput;
+// buttons addEventListener:
+buttons.forEach((btn) => {
+	// #btn
+	btn.addEventListener('click', () => {
+		// display.innerText += btn.innerText;
+		const displayText = btn.innerText; // todo
+		console.log(displayText);
+		changeDisplay(displayText);
 	});
 });
 
-clearButton.addEventListener('click', () => {
-	currentInput = '';
-	display.value = '';
+btnBackslash.addEventListener('click', () => {
+	console.log(btnBackslash.value);
 });
 
-equalButton.addEventListener('click', () => {
-	try {
-		currentInput = eval(currentInput);
-		console.log(currentInput);
-		// display.value = currentInput;
-	} catch (error) {
-		display.value = 'Error';
-		currentInput = '';
-	}
-});
+// func: change display value: #dis
+const changeDisplay = (innerText) => {
+	display.value += innerText; //todo
+};

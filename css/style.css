@@ -131,6 +131,16 @@ offset text: fall opacity 30% */
 	border: none;
 }
 
+#backslash {
+	text-align: center;
+	color: #017aff;
+	font-size: 1.8rem;
+	font-weight: bolder;
+	border: none;
+	background-color: #ffffff;
+	cursor: pointer;
+}
+
 .colorful {
 	background-color: #017aff;
 	color: #f8f9fb;
